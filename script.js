@@ -8,6 +8,10 @@ let pwdValue = password.value;
 
 // selectForm.style.display = "block";
 
+email.addEventListener("input", (event) => {
+  validateEmail();
+});
+
 password.addEventListener("input", (event) => {
   validatePassword();
   comparePasswords();
@@ -16,6 +20,15 @@ password.addEventListener("input", (event) => {
 passwordconfirm.addEventListener("input", (event) => {
   comparePasswords();
 });
+
+function validateEmail() {
+  let emailValue = email.value;
+  if (emailValue.includes("@") && emailValue.includes(".")) {
+    email.setCustomValidity("");
+  } else {
+    email.setCustomValidity("Please enter a valid e-mail address");
+  }
+}
 
 function validatePassword() {
   let pwdValue = password.value;
