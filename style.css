@@ -15,3 +15,19 @@ input:invalid {
   border-color: #900;
   background-color: #fdd;
 }
+.emailError {
+  color: red;
+  font-size: 0.8rem;
+}
+.zipcodeError {
+  color: red;
+  font-size: 0.8rem;
+}
+.passwordError {
+  color: red;
+  font-size: 0.8rem;
+}
+.passwordconfirmError {
+  color: red;
+  font-size: 0.8rem;
+}

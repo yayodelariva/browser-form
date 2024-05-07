@@ -10,29 +10,32 @@
     <form action="#" method="get" novalidate id="form">
         <div class="emailContainer">
             <label for="email">E-mail address:</label>
-            <input type="email" id="email" required>
+            <input type="text" id="email" >
+            <div class="emailError"></div>
         </div>
         <div class="countryContainer">
             <label for="country">Country:</label>
             <select name="country" id="country" required>
-            <option value="canada">Canada</option>
-            <option value="germany">Germany</option>
-            <option value="japan">Japan</option>
-            <option value="mexico">Mexico</option>
-            <option value="unitedstates">United States</option>
+            <option value="ch">Switzerland</option>
+            <option value="fr">France</option>
+            <option value="de">Germany</option>
+            <option value="nl">The Netherlands</option>
         </select>
     </div>
         <div class="zipcodeContainer">
             <label for="zipcode">Zip Code:</label>
             <input type="text" id="zipcode" required>
+            <div class="zipcodeError"></div>
         </div>
         <div class="passwordContainer">
             <label for="password">Password:</label>
             <input type="password" id="password" minlength="5" required>
+            <div class="passwordError"></div>
         </div>
         <div class="passwordconfirmContainer">
             <label for="passwordconfirm">Confirm Password:</label>
             <input type="password" id="passwordconfirm" required>
+            <div class="passwordconfirmError"></div>
         </div>
 
     </form>
