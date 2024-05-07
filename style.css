@@ -1,0 +1,17 @@
+html {
+  background-color: mediumaquamarine;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: lightsteelblue;
+  width: 22rem;
+  height: auto;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+}
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
