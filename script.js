@@ -4,6 +4,7 @@ const country = document.querySelector("#country");
 const zipcode = document.querySelector("#zipcode");
 const password = document.querySelector("#password");
 const passwordconfirm = document.querySelector("#passwordconfirm");
+const submitButton = document.querySelector("#submitButton");
 const emailError = document.querySelector(".emailError");
 const zipcodeError = document.querySelector(".zipcodeError");
 const passwordError = document.querySelector(".passwordError");
@@ -26,6 +27,14 @@ password.addEventListener("input", (event) => {
 
 passwordconfirm.addEventListener("input", (event) => {
   comparePasswords();
+});
+
+selectForm.addEventListener("change", (event) => {
+  enableSubmitButton();
+});
+
+submitButton.addEventListener("click", (event) => {
+  alert("hi five!");
 });
 
 function validateEmail() {
@@ -103,5 +112,20 @@ function checkZIP() {
     // give a message about the format required for this country
     zipcode.setCustomValidity(constraints[countryValue][1]);
     zipcodeError.textContent = constraints[countryValue][1];
+  }
+}
+
+function enableSubmitButton() {
+  if (
+    email.validity.customError === false &&
+    zipcode.validity.customError === false &&
+    password.validity.customError === false &&
+    passwordconfirm.validity.customError === false
+  ) {
+    submitButton.removeAttribute("disabled");
+    return;
+  } else {
+    submitButton.setAttribute("disabled", "");
+    return;
   }
 }

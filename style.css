@@ -11,6 +11,9 @@ form {
   border-radius: 10px;
   padding: 1rem 1rem;
 }
+#submitButton {
+  width: 6rem;
+}
 input:invalid {
   border-color: #900;
   background-color: #fdd;
